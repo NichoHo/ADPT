@@ -1,0 +1,567 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #424343; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #696968; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7b7b7b; 
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+  
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    transition: top 0.3s ease;
+}
+  
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.logo {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    position: relative;
+}
+  
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #03A9F4;
+    transition: width 0.3s ease-in-out;
+}
+  
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.navbar-login {
+    color: #03A9F4 !important;
+    border-color: #03A9F4;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 6px;
+    width: 6rem;
+    text-align: center;
+    transition: 0.25s ease-out;
+}
+
+.navbar-login:hover{
+    color: white !important;
+    background-color: #03A9F4;
+    border-color: #03A9F4;
+    transition: 0.25s ease-out;
+}
+
+.burger {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.918);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.overlay-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title-content {
+    max-width: 600px;
+    padding: 100px;
+}
+
+.title-screen h2 {
+    font-size: 3em;
+    color: white;
+    line-height: 1.2rem;
+}
+
+.title-screen p {
+    font-size: 1rem;
+    color: white;
+    font-weight: 300;
+    margin: 2rem 0;
+}
+
+.title-screen a {
+    color: white;
+    letter-spacing: 1px;
+    background-color: #03A9F4;
+    border-color: #03A9F4;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    transition: 0.25s ease-out;
+    text-decoration: none;
+}
+
+.title-screen a:hover {
+    color: #03A9F4;
+    background-color: transparent;
+    border-color: #03A9F4;
+    transition: 0.25s ease-out;
+}
+
+.services {
+    background-color: #03A9F4;
+    padding: 4rem 0;
+}
+
+.services h2 {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+.service-content {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.left-services, .right-services {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service1, .service2, .service3, .service4 {
+    display: flex;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.service-description {
+    margin-left: 1rem;
+}
+
+.service-description h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.service-description p {
+    margin: 0;
+    padding: 0;
+}
+
+.exercises {
+    background-color: #202020;
+    padding: 4rem 0;
+}
+
+.exercises h2 {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin-block-end: 0;
+}
+
+.exercise-bio {
+    color: white;
+    text-align: center;
+    margin-block-start: 0.5em;
+}
+
+.exercise-type {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.exercise1, .exercise2, .exercise3 {
+    border-radius: 6px;
+    background-color: #383838;
+    width: 30%;
+    margin: 0.5rem;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.exercise1:hover, .exercise2:hover, .exercise3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.exercise1 img, .exercise2 img, .exercise3 img {
+    max-width: 100px; 
+    max-height: 100px; 
+    padding: 0.5rem;
+    margin: auto; 
+    display: block;
+}
+
+.exercise1 h3, .exercise2 h3, .exercise3 h3 {
+    color: #03A9F4;
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: 0;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.exercise1 p, .exercise2 p, .exercise3 p {
+    color: white;
+    text-align: center;
+}
+
+.membership {
+    background: url(/img/gym.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 10rem;
+}
+
+.membership-container {
+    display: flex;
+    justify-content: center;
+    background-color: #383838;
+    border-radius: 10px;
+    padding: 3rem;
+}
+
+.membership img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 4rem;
+}
+
+.membership-content {
+    width: 50%;
+}
+
+.membership-content h2 {
+    margin-top: 0;
+    color: #03A9F4;
+    font-size: 2.5em;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.membership-content p {
+    color: white;
+    margin-block-end: 0;
+}
+
+.membership-content ul {
+    color: white;
+    margin-block-start: 0.5em;
+    line-height: 2.5;
+    margin-bottom: 2rem;
+}
+
+.membership-content li {
+	margin: 0;
+    position: relative;
+    left: -2rem;
+	padding: 0 0 0 2.5rem;
+	list-style: none;
+	background-image: url("/img/check.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 1rem;
+}
+
+.membership-content a {
+    color: white;
+    letter-spacing: 1px;
+    background-color: #03A9F4;
+    border-color: #03A9F4;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    transition: 0.25s ease-out;
+    text-decoration: none;
+}
+
+.membership-content a:hover {
+    color: #03A9F4;
+    background-color: transparent;
+    border-color: #03A9F4;
+    transition: 0.25s ease-out;
+}
+
+.faq {
+    background-color: #03A9F4;
+    padding: 4rem 0;
+}
+
+.faq h2 {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+.faq-content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.faq-question {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid  white;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.faq-item:last-child .faq-question {
+    border-bottom: 1px solid white;
+}
+
+.faq-answer {
+    display: none;
+    padding: 1rem;
+    color: white;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item span {
+    float: right;
+}
+
+footer {
+    background-color: #141414;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 75px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+    .membership-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .membership-content h2 {
+        font-size: 2em;
+    }
+    
+    .membership img {
+        display: none;
+    }
+
+    .membership-content {
+        width: 90%;
+    }
+
+    .faq-content {
+        width: 80%;
+    }    
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .title-content {
+        padding: 40px;
+    }
+
+    section {
+        background: url(/img/background2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .title-screen h2 {
+        font-size: 2.5em;
+        line-height: 1rem;
+    }
+
+    .service-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-services, .right-services {
+        width: 100%;
+    }
+
+    .service-description h3 {
+        font-size: 1.25rem;
+    }
+    
+    .service-description p {
+        font-size: 0.9rem;
+    }
+
+    .exercise-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .exercise1, .exercise2, .exercise3 {
+        width: 100%;
+    }
+
+    .membership {
+        padding: 2rem;
+    }
+
+    .membership-content ul {
+        line-height: 2;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+
+    .footer-logo img {
+        max-width: 50px;
+    }
+
+    .footer-links a {
+        margin: 0 0.25rem;
+    }
+
+    .footer-social a {
+        margin: 0 0.25rem;
+    }
+}

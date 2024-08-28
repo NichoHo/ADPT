@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css"/>
+    <!--Google Font-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>ADPT</title>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-container">
+                  <a href="#"><img src="img/logo.png" class="logo"></a>
+                  <div class="navbar-links">
+                    <a href="/">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#exercises">Exercises</a>
+                    <a href="/membership">Membership</a>
+                    <a href="#faq">FAQ</a>
+                    <a class="navbar-login" href="/login">Log In</a>
+                  </div>
+                  <div class="burger" onclick="toggleNavbar()">&#9776;</div>
+                </div>
+            </nav>
+              
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <a href="/">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#exercises">Exercises</a>
+                    <a href="/membership">Membership</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="/login">Log In</a>
+                </div>
+            </div>
+        </header>
+        <div class="title-content">
+            <div class="title-screen">
+                <h2>Build Your Body</h2>
+                <h2>with Your Own</h2>
+                <h2 style="color: #03A9F4;">Personalized Plan</h2>
+                <p>Revolutionize your fitness journey with AI-powered personalization. Using cutting-edge technology, we analyze your unique goals, preferences, and body metrics to tailor a customized workout and diet plan just for you. With AI-powered guidance and real-time adjustments, achieving your fitness aspirations has never been more intuitive and effective.</p>
+                <a href="#">Get Started</a>
+            </div>
+        </div>
+    </section>
+    <div class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-content">
+            <div class="left-services">
+                <div class="service1">
+                    <img style="max-width: 50px; max-height: 50px;" src="img/work-out.png"/>
+                    <div class="service-description">
+                        <h3>Personalized Work Out Plan</h3>
+                        <p>With ADPT, each user receives a custom workout plan meticulously crafted based on their individual goals, fitness level, and preferences.</p>
+                    </div>
+                </div>
+                <div class="service2">
+                    <img style="max-width: 50px; max-height: 50px;" src="img/push-up.png">
+                    <div class="service-description">
+                        <h3>Versatile Fitness Solutions</h3>
+                        <p>ADPT provides comprehensive workout plans tailored to suit your lifestyle, whether you prefer hitting the gym or working out in the comfort of your own home. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-services">
+                <div class="service3">
+                    <img style="max-width: 50px; max-height: 50px;" src="img/diet.png">
+                    <div class="service-description">
+                        <h3>Personalized Diet Plan</h3>
+                        <p>ADPT analyzes your dietary needs, preferences, and goals, crafting a tailored nutrition plan just for you.</p>
+                    </div>
+                </div>
+                <div class="service4">
+                    <img style="max-width: 50px; max-height: 50px;" src="img/guidance.png">
+                    <div class="service-description">
+                        <h3>AI guidance</h3>
+                        <p>If users experience workout stagnation, ADPT's AI Guidance kicks in, offering dynamic adjustments and innovative suggestions to break through plateaus and keep progress on track.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exercises" id="exercises">
+        <h2>Exercises</h2>
+        <p class="exercise-bio">Here are exercises you can do:</p>
+        <div class="exercise-type">
+            <div class="exercise1">
+                <img src="img/weight-lifting.png">
+                <h3>Strength Training</h3>
+                <p>Including weightlifting, bodyweight exercises, and resistance training, which build muscle strength and tone.</p>
+            </div>
+            <div class="exercise2">
+                <img src="img/cardio.png">
+                <h3>Cardio</h3>
+                <p>Such as running, cycling, and swimming, which improve cardiovascular health and endurance.</p>
+            </div>
+            <div class="exercise3">
+                <img src="img/yoga.png">
+                <h3>Flexibility Exercises</h3>
+                <p>Stretching exercises like Yoga and Pilates improve flexibility and range of motion, enhancing overall mobility and reducing the risk of injury.</p>
+            </div>
+        </div>
+    </div>
+    <div class="membership">
+        <div class="membership-container">
+            <img src="img/fitness.jpg">
+            <div class="membership-content">
+                <h2>Become a Member</h2>
+                <ul>
+                    <li>Personalized work out plan</li>
+                    <li>Personalized diet out plan</li>
+                    <li>Food nutrients calculator</li>
+                    <li>AI guidance</li>
+                </ul>
+                <a href="#">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-content">
+            <div class="faq-item">
+                <button class="faq-question">How does ADPT personalize my workout plan? <span class="toggle-sign">+</span></button>
+                <div class="faq-answer">
+                    <p>ADPT tailors your workout plan by analyzing your fitness goals, current level of fitness, preferences, and any relevant health considerations, ensuring a program that is specifically designed for you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What if I'm unsure about certain exercises or techniques? <span class="toggle-sign">+</span></button>
+                <div class="faq-answer">
+                    <p>Don't worry! ADPT provides detailed instructional videos for each exercise within your plan, ensuring proper form and technique to maximize effectiveness and minimize the risk of injury. If you're still experiencing difficulty, ADPT provides guidance through its AI chatbot, offering tips on how to do the exercise. ADPT even suggests alternative exercises in case you are having difficulty doing the original exercise.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I track my progress with ADPT? <span class="toggle-sign">+</span></button>
+                <div class="faq-answer">
+                    <p>Yes, ADPT allows you to easily track your progress over time, including metrics like weight lifted, distance covered, and improvements in endurance or flexibility, providing you with valuable insights into your fitness journey.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What happens if I encounter a fitness plateau? <span class="toggle-sign">+</span></button>
+                <div class="faq-answer">
+                    <p>If you hit a plateau, ADPT's AI algorithms will analyze your data to understand the stagnation and then recommend adjustments to your workout plan, helping you overcome obstacles and continue making progress towards your goals.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I choose to keep my fitness data private from my friends while still using other features of the app? <span class="toggle-sign">+</span></button>
+                <div class="faq-answer">
+                    <p>ADPT offers a social feature where users can view their friends' workout data for added motivation and friendly competition. However, users have full control over their privacy settings and can choose to make their data private, which also means they won't be able to see their friends' data.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Artificial-Intelligence Driven Personal Trainer. All rights reserved.</p>
+        </div>
+    </footer>    
+    <script src="js/script.js"></script>
+</body>

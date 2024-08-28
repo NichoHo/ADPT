@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/membership.css">
+    <!--Google Font-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>ADPT Membership</title>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-container">
+                  <a href="#"><img src="img/logo.png" class="logo"></a>
+                  <div class="navbar-links">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#exercises">Exercises</a>
+                    <a href="/membership">Membership</a>
+                    <a href="/#faq">FAQ</a>
+                    <a class="navbar-login" href="/login">Log In</a>
+                  </div>
+                  <div class="burger" onclick="toggleNavbar()">&#9776;</div>
+                </div>
+            </nav>
+              
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#exercises">Exercises</a>
+                    <a href="/membership">Membership</a>
+                    <a href="/#faq">FAQ</a>
+                    <a href="/login">Log In</a>
+                </div>
+            </div>
+        </header>
+        <div class="membership-container">
+            <div class="membership-benefits">
+                <h2>Unlock Your Ultimate Fitness Potential</h2>
+                <p>Take your fitness journey to the next level by becoming a member of ADPT. Join us to experience tailored fitness solutions designed to help you achieve your goals faster, smarter, and with greater satisfaction.</p>
+                <p>Here are what we offer you:</p>
+                <ul>
+                    <li>Personalized work out plan</li>
+                    <li>Personalized diet out plan</li>
+                    <li>Food nutrients calculator</li>
+                    <li>AI guidance</li>
+                </ul>
+            </div>
+            <div class="membership-form">
+                <div class="form-container">
+                    <h2>Sign Up</h2>
+                    <form id="membershipForm" action="/membership" method="POST">
+                        <!-- Slide 1 -->
+                        <div id="slide1" class="form-slide">
+                            <input type="text" name="name" class="input-text" placeholder="Full Name" required>
+                            <input type="tel" name="phone_number" class="input-text" placeholder="Phone Number" required>
+                            <input type="email" name="email" class="input-text" placeholder="Email" required>
+                            <input type="password" name="password" class="input-text" placeholder="Password" required>
+                            <input type="password" name="confirm_password" class="input-text" placeholder="Confirm Password" required>
+                            
+                            <div class="terms-condition">
+                                <input type="checkbox" name="terms" required>
+                                <label for="terms">I agree to the terms and conditions</label>
+                            </div>
+                    
+                            <button type="button" class="input-submit" onclick="showSlide(2)">Next</button>
+                        </div>
+                    
+                        <!-- Slide 2 -->
+                        <div id="slide2" class="form-slide" style="display: none;">
+                            <div class="flex-container">
+                                <input type="number" name="age" class="input-text half-width" placeholder="Age" min="1" required>
+                                <select name="gender" class="input-text half-width" required>
+                                    <option value="" disabled selected>Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        
+                            <div class="flex-container">
+                                <input type="number" name="weight" class="input-text half-width" placeholder="Weight (kg)" min="1" required>
+                                <input type="number" name="height" class="input-text half-width" placeholder="Height (cm)" min="1" required>
+                            </div>
+                        
+                            <select name="goal" class="input-text" required>
+                                <option value="" disabled selected>Select Your Goal</option>
+                                <option value="Weight Loss">Weight Loss</option>
+                                <option value="Muscle Gain">Muscle Gain</option>
+                                <option value="Improved Cardiovascular Health">Improved Cardiovascular Health</option>
+                                <option value="Flexibility and Mobility">Flexibility and Mobility</option>
+                            </select>
+                        
+                            <input type="number" name="target_weight" class="input-text" placeholder="Target Weight (kg)" min="1" required>
+                        
+                            <button type="submit" class="input-submit">Submit</button>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtual Intelligent Trainer. All rights reserved.</p>
+        </div>
+    </footer>    
+    <script src="js/script.js"></script>
+</body>

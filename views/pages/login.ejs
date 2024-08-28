@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <!--Google Font-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Login</title>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-container">
+                  <a href="#"><img src="img/logo.png" class="logo"></a>
+                  <div class="navbar-links">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#exercises">Exercises</a>
+                    <a href="/membership">Membership</a>
+                    <a href="/#faq">FAQ</a>
+                    <a class="navbar-login" href="/login">Log In</a>
+                  </div>
+                  <div class="burger" onclick="toggleNavbar()">&#9776;</div>
+                </div>
+            </nav>
+              
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#exercises">Exercises</a>
+                    <a href="/membership">Membership</a>
+                    <a href="/#faq">FAQ</a>
+                    <a href="/login">Log In</a>
+                </div>
+            </div>
+        </header>
+        <div class="login-container">
+            <form action="/login" method="POST">
+                <h2>Log In</h2>
+                <input type="email" class="input-text" name="email" placeholder="Email" required> 
+                <input type="password" class="input-text" name="password" placeholder="Password" required>
+                <input type="submit" class="input-submit" value="Log In">
+                <p>Don't have an account? <a href="/membership">Sign Up</a></p>
+            </form>
+            <div class="form-img">
+                <img src="img/fitness2.png">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtual Intelligent Trainer. All rights reserved.</p>
+        </div>
+    </footer>    
+    <script src="js/script.js"></script>
+</body>
+</html>
